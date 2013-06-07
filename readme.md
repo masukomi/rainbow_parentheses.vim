@@ -27,8 +27,6 @@
 
     let g:rbpt_max = 16
 
-- always toggle
-
     let g:rbpt_loadcmd_toggle = 0
 
 ### Commands:
@@ -39,11 +37,12 @@
     :RainbowParenthesesLoadBraces   " {}
     :RainbowParenthesesLoadChevrons " <>
 
-
 ### Always On:
 
-    au VimEnter * RainbowParenthesesToggle
-    au Syntax * RainbowParenthesesLoadRound
-    au Syntax * RainbowParenthesesLoadSquare
-    au Syntax * RainbowParenthesesLoadBraces
-
+    augroup RainbowParentheses
+        au!
+        au VimEnter * RainbowParenthesesToggle
+        au Syntax * RainbowParenthesesLoadRound
+        au Syntax * RainbowParenthesesLoadSquare
+        au Syntax * RainbowParenthesesLoadBraces
+    augroup END
