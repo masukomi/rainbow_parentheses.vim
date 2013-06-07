@@ -29,6 +29,13 @@
 
     let g:rbpt_loadcmd_toggle = 0
 
+```vim
+let g:rbpt_bold = 0
+```
+
+`g:rbpt_bold` highlights colored parentheses in bold to make them easier to see.
+`1` to enable. Default is `0`.
+
 ### Commands:
 
     :RainbowParenthesesToggle       " Toggle it on/off
