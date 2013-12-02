@@ -41,11 +41,14 @@ cal s:extend()
 func! rainbow_parentheses#activate()
 	let [id, s:active] = [1, 1]
 	for [ctermfg, guifg] in s:pairs
-    if s:bold
-      exe 'hi default level'.id.'c ctermfg='.ctermfg.' guifg='.guifg.' cterm=bold'
-    else
-      exe 'hi default level'.id.'c ctermfg='.ctermfg.' guifg='.guifg
-    endif
+		if s:bold
+			exe 'hi default level'.id.'c ctermfg='.ctermfg.' guifg='.guifg.' cterm=bold'
+		else
+			exe 'hi default level'.id.'c ctermfg='.ctermfg.' guifg='.guifg
+		" uncomment the following to highlight the contents 
+		" of the parens too. 
+		" exe 'hi default level'.id.' ctermfg='.ctermfg.' guibg='.guifg
+		endif
 		let id += 1
 	endfor
 endfunc
