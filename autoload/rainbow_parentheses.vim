@@ -1,7 +1,12 @@
 "==============================================================================
 "  Description: Rainbow colors for parentheses, based on rainbow_parenthsis.vim
-"               by Martin Krischik and others.
-"               2011-10-12: Use less code.  Leave room for deeper levels.
+"               with contributions by 
+"               * Boris Petrov
+"               * Joe Hillebrand
+"               * Kien N
+"               * Martin Krischik
+"               * masukomi
+"               * Patrick McFarland
 "==============================================================================
 
 let s:pairs = [
